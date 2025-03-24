@@ -34,8 +34,17 @@ while True:
     if cat == 'q':
         # print(cats[:]) | can be but i am using for loop for this one
         for c in range(len(cats)):
-            print(cats[c])
-        sys.exit() # or break
+            print('Index #' + str(c) + ' is: ' + cats[c])
+        break # or sys.exit() | I prefered this but the rest of the code will go void
     else:
-        cats.append(cat)
+        if cat not in cats: # check if the cat name is already in the list
+            cats.append(cat)
+        else:
+            print('The name already exists.')
+
+# in and not in operators for finding something in lists
+a = 'meaow' in cats
+b = 'meaow' not in cats
+print(str(a))
+print(str(b))
 
