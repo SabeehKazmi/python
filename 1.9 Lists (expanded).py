@@ -32,9 +32,10 @@ while True:
     print('Enter your cat name or press \'q\' to quit: ')
     cat = input()
     if cat == 'q':
-        print(cats[:])
+        # print(cats[:]) | can be but i am using for loop for this one
+        for c in range(len(cats)):
+            print(cats[c])
         sys.exit() # or break
     else:
         cats.append(cat)
 
-# for loop on lists
