@@ -14,3 +14,20 @@
 #                 continue # stops the loop or if right there and restarts it
 #         cats.append(user_input)
 
+# instead of using range(len(ls)) we use enumerate which gives index + value. 
+ls = [4, 2, 3, 4, 5]
+for i, x in enumerate(ls):
+    print(ls[i])
+
+#random.choice() and random.shuffle() on lists
+import random
+print(str(random.choice(ls)))
+print('-->')
+random.shuffle(ls)
+print(ls)
+
+# ls += 1 operator works similarly as ls = ls + 1
+
+# index() method to search index of something within list
+ls.index(2) # output: 1
+
