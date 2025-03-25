@@ -21,7 +21,7 @@ print(len(smp_lst)) # list length
 # deleting with del and comparison with .remove
 li_lst = ['H', 'S', 'Z']
 # li_lst.remove(0) | it will not work as it can't remove values from index
-# li_list.remove('H') | it will work
+# li_lst.remove('H') | it will work
 del li_lst[0]
 print(li_lst)
 
@@ -47,4 +47,3 @@ a = 'meaow' in cats
 b = 'meaow' not in cats
 print(str(a))
 print(str(b))
-
