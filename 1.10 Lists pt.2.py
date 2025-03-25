@@ -31,3 +31,13 @@ print(ls)
 # index() method to search index of something within list
 ls.index(2) # output: 1
 
+# .insert works like .append but you can specify the location
+ls.insert(1, 2) # 1 location 2 value
+print(ls)
+
+# sort and reverse sort on lists
+ls.sort()
+print(ls)
+ls.sort(reverse=True)
+# or you can use | ls.reverse()
+print(ls)
