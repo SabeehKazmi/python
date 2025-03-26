@@ -1,31 +1,42 @@
 # Conway's Game of Life
 import random, time, copy
 
-# why copy? because we will be using copy.deepcopy()
-# what is copy.deepcopy()? To understand this we have the following program "terminate"
-# program "terminate" starts
-you = {'name': 'Hassan', 'skills': ['c++', 'C#', 'Python']} #nested data structure with a string and list
-_copy = copy.copy(you)
-_deepcopy = copy.deepcopy(you)
-you['skills'].append('JS')
-print(_copy) # output {'name': 'Hassan', 'skills': ['c++', 'C#', 'Python', 'JS']}
-print(_deepcopy) # output {'name': 'Hassan', 'skills': ['c++', 'C#', 'Python']}
-# the deepcopy will remain untouched and in its original state. it's used e.g., to save game states
-# program "terminate" ends
+# # why copy? because we will be using copy.deepcopy()
+# # what is copy.deepcopy()? To understand this we have the following program "terminate"
+# # program "terminate" starts
+# you = {'name': 'Hassan', 'skills': ['c++', 'C#', 'Python']} #nested data structure with a string and list
+# _copy = copy.copy(you)
+# _deepcopy = copy.deepcopy(you)
+# you['skills'].append('JS')
+# print(_copy) # output {'name': 'Hassan', 'skills': ['c++', 'C#', 'Python', 'JS']}
+# print(_deepcopy) # output {'name': 'Hassan', 'skills': ['c++', 'C#', 'Python']}
+# # the deepcopy will remain untouched and in its original state. it's used e.g., to save game states
+# # program "terminate" ends
 
-# WIDTH = 60
-# HEIGHT = 20
+# represent grid
+HEIGHT = 20
+WIDTH = 60
 
-# # Create a list of list for the cells:
-# nextCells = []
-# for x in range(WIDTH):
-#     column = [] # Create a new column.
-#     for y in range(HEIGHT):
-#         if random.randint(0, 1) == 0:
-#             column.append('#') # Add a living cell.
-#         else:
-#             column.append(' ') # Add a dead cell.
-#     nextCells.append(column) # nextCells is a list of column lists.
+# # to understand the grid better let's run a little program
+# # starts
+# for a in range(HEIGHT):
+#     for b in range(WIDTH):
+#         print('*', end='')
+#     print() #this print will perform as enter (next line)
+# # ends
+
+
+
+# Create a list of list for the cells:
+nextCells = []
+for x in range(WIDTH):
+    column = [] # Create a new column.
+    for y in range(HEIGHT):
+        if random.randint(0, 1) == 0:
+            column.append('#') # Add a living cell.
+        else:
+            column.append(' ') # Add a dead cell.
+    nextCells.append(column) # nextCells is a list of column lists.
 
 # while True: # Main program loop.
 #     print('\n\n\n\n\n') # Separate each step with newlines.
