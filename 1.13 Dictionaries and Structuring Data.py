@@ -55,7 +55,7 @@ for key, val in nest_dir.items():
 print('\n' * 5)
 
 # checking if a key or value exists in a dir
-# first way to do so
+# first way to do so via get() method
 if 'programming' in nest_dir.get('classes', []): #check for values in a known key, only if we know the key
     print('found!')
 # second way to do so | if we don't even the key in which the value resides
@@ -68,3 +68,18 @@ for a, b in nest_dir.items():
                 print('found in ' + c)
 print('\n' * 5)
 
+# the setdefault() method to add values
+# the general way to do so
+if 'student' in nest_dir.keys():
+    print('already exist!')
+else:
+    nest_dir['student'] = 'hassan'
+    print(nest_dir)
+# thorugh setdefault() method
+nest_dir.setdefault('student','hassan')
+
+# however, to override a value:
+nest_dir.setdefault('student','ali') # it doesn't override and still returns 'hassan'
+nest_dir['student'] = 'ali'
+print('\n' * 5)
+print(nest_dir)
