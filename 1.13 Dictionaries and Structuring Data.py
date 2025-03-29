@@ -52,4 +52,19 @@ for key, val in nest_dir.items():
             print('Sub_Key: ' + sub_key + '\t Sub_Value: ' + str(sub_val))
     else:
         print(' Value: ' + str(val))
+print('\n' * 5)
+
+# checking if a key or value exists in a dir
+# first way to do so
+if 'programming' in nest_dir.get('classes', []): #check for values in a known key, only if we know the key
+    print('found!')
+# second way to do so | if we don't even the key in which the value resides
+for a, b in nest_dir.items():
+    if isinstance(b, list) and 'programming' in b:
+        print('found in ' + a)
+    elif isinstance(b, dict):
+        for c, d in b.items():
+            if isinstance(d, list) and 'programming' in d:
+                print('found in ' + c)
+print('\n' * 5)
 
