@@ -1,16 +1,16 @@
 # need an introduction? I don't think so, let's go straight to the code, brother
 import sys
 board = {
-    'TL':'', 'TC':'', 'TR':'',
-    'CL':'', 'CC':'', 'CR':'',
-    'BL':'', 'BC':'', 'BR':''
+    'TL':' ', 'TC':' ', 'TR':' ',
+    'CL':' ', 'CC':' ', 'CR':' ',
+    'BL':' ', 'BC':' ', 'BR':' '
 }
 
 def p_board(x):
     print('  ' + x['TL'] + ' | ' + x['TC'] + ' | ' + x['TR'])
-    print('-----------')
+    print('  ----------')
     print('  ' + x['CL'] + ' | ' + x['CC'] + ' | ' + x['CR'])
-    print('-----------')
+    print('  ----------')
     print('  ' + x['BL'] + ' | ' + x['BC'] + ' | ' + x['BR'])
 
 p_board(board)
@@ -40,7 +40,7 @@ def ttt():
     cur_move_no = 0
     max_moves = 9
 
-    while cur_move_no <= max_moves:
+    while cur_move_no < max_moves:
         print('\n You\'re (' + current_player + ') What\'s your move? Or press q to quit')
         plyr_mv = input()
 
@@ -51,11 +51,11 @@ def ttt():
             print('Invalid!')
             continue
 
-        if board[plyr_mv] != '':
+        if board[plyr_mv] != ' ':
             print('already taken!')
             continue
         
-        board[plyr_mv] == current_player
+        board[plyr_mv] = current_player
         cur_move_no += 1
         p_board(board)
 
