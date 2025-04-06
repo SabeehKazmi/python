@@ -26,3 +26,16 @@ for itm, val in nest_dir.items():
             pprint.pformat(itm + ' | ' + str(sub_val))
     else:
         pprint.pformat(itm + ' | ' + str(val))
+# no output? because pformat() only returns a string and doesn't output something
+# we need to insert this all in print() to produce an output
+# like this:
+for itm, val in nest_dir.items():
+    if isinstance(val, list):
+        for sub_val in val:
+            print(pprint.pformat(itm + ' | ' + str(sub_val)))
+    else:
+        print(pprint.pformat(itm + ' | ' + str(val)))
+# observed something?
+# no difference b/w pprint() and pformat() right? because pformat() returns pretty-formatted string that you can store in a file e.g., logs
+# in a pretty format | pretty useful, right!
+
