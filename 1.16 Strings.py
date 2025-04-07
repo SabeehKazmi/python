@@ -28,4 +28,10 @@ print(''.join([name[i] for i in cunt])) # much better
 'man' in name
 # true
 
-# putting strings inside other strings
+# putting strings inside other strings via string interpolation
+age = 1200
+print('My name is %s and I am %s australian years old.' % (name, age)) # the best part is we don't even need str() for age, much better right?
+
+# via f-strings
+print(f'My name is {name} and I am {age} australian years old.') # even better... aaah!
+
