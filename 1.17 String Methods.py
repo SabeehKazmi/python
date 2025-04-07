@@ -33,4 +33,26 @@ if num.isdecimal():
     print("You got this!")
 # you got the gist.
 
-# startswith() and endswith() methods
+# startswith() and endswith() methods | these methods are self-explanatory
+if name4.startswith('Af'):
+    print("Yes!")
+if passwd.endswith('34'):
+    print("Same password again!!!")
+
+# join() and split() methods
+# you have seen the execution of join method before in "1.16 Strings" when we were getting elements from a string to create a new string
+print(' - '.join([name1, name2, name3, name4]))
+print('\n' * 2)
+# split() does the opposite
+print('John Smith'.split()) # e.g., firstname lastname
+print('John_Smith'.split('_')) # same output you can even .split('\n') for a '''string_value''' string
+print('\n')
+
+# partition() method
+# split string into three based on the passed parameter in partition('passed_parameter') e.g.,
+str1 = 'PULL'
+str2 = 'LASSY'
+str3 = str1.partition('L')[0]
+str4 = str2.partition('A')[2]
+print(''.join([str3, str4])) # got any lately?
+
