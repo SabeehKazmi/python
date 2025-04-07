@@ -28,3 +28,4 @@ print(''.join([name[i] for i in cunt])) # much better
 'man' in name
 # true
 
+# putting strings inside other strings
