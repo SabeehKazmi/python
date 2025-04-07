@@ -92,3 +92,12 @@ python_s = 'SnakeBlackWidowSnake'
 print(python_s.strip('eakSn')) # no matter the configuration you can enter ' ' space or anything or nothing it will strip away everything
 print(python_s.lstrip('Snake'))
 print(python_s.rstrip('Snake'))
+
+# ord() and chr() functions
+# ord() to get Unicode of a string
+print(ord('A'))
+ords = 'John'
+for i in ords:
+    print(f"{i} => {ord(i)}")
+# chr() to get string of a unicode
+print(chr(65))
