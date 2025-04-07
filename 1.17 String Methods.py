@@ -56,3 +56,8 @@ str3 = str1.partition('L')[0]
 str4 = str2.partition('A')[2]
 print(''.join([str3, str4])) # got any lately?
 
+# rjust() ljust() and center() methods | e.g., rjust(10) *10 represents spaces
+str5 = ''.join([str3, str4])
+print(str5.rjust(10))
+print(str5.ljust(20))
+print(str5.center(10)) # five from left and five from right
