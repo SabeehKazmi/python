@@ -87,3 +87,8 @@ log(armory, 20, 20)
 print('\n' * 2)
 # ends
 
+# strip() lstrip() and rstrip() for removing whitespaces (space, tab, newline)
+python_s = 'SnakeBlackWidowSnake'
+print(python_s.strip('eakSn')) # no matter the configuration you can enter ' ' space or anything or nothing it will strip away everything
+print(python_s.lstrip('Snake'))
+print(python_s.rstrip('Snake'))
