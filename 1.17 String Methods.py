@@ -61,3 +61,29 @@ str5 = ''.join([str3, str4])
 print(str5.rjust(10))
 print(str5.ljust(20))
 print(str5.center(10)) # five from left and five from right
+# or
+print(str5.rjust(10, '-'))
+print('\n' * 2)
+
+'''
+A simple program to understand the just of rjust() ljust() and center() better for displaying files in more readable format
+'''
+# starts
+armory = {
+    'Rifles':{'AK47':'12', 'MP5':'6','M4':'2'},
+    'Pistols':{'Glock 15':'4', 'Glock 17':'2', 'Bratta 9mm':'3'},
+    'Gernads':{'G6X':'2', 'G12C':'4'}
+}
+def log(item, left, right):
+    print('Armory'.center(left + right, '-'))
+    for a, b in item.items():
+        print(a.center(left + right, '='))
+        if isinstance(b, dict):
+            for c, d in b.items():
+                print(c.ljust(left, '*') + str(d).rjust(right, '*'))
+        else:
+            print(a.ljust(left, '-') + str(b).rjust(right, '-'))
+log(armory, 20, 20)
+print('\n' * 2)
+# ends
+
