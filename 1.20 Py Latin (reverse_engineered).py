@@ -40,4 +40,4 @@ for word in message.split(): # this will split the message into words
     # add back any punctuations to the word
     PyLatin.append(prefixNonLetters+word+suffixNonLetters)
     # combines all the words into a sentence
-    print(' '.join(PyLatin))
+print(' '.join(PyLatin))
