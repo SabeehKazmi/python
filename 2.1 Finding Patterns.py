@@ -1,3 +1,8 @@
+# finding patterns
+
+'''
+Ignore the rest (below is just an experimental of code to manipulate strings-numbers)
+'''
 # # let's find a phone no in a string
 # data={
 #     'name':'John',
@@ -64,33 +69,32 @@ Logic
 > if pno4 is '-'
 > correct and print
 '''
-print('Enter:')
-pno=input()
-if len(pno) > 9:
-    if pno[0:3] == '+92':
-        if len(pno) == 12 or len(pno) == 13 or len(pno) == 14:
-            if pno[1:11].isdigit():
-                pno = '0'+pno[3:6]+'-'+pno[6:]
-                print(pno)
-            elif pno[6] == '-':
-                print(pno)
-            else:
-                print('Error 401!')
-        else:
-            print('Error 402!')
-    elif pno[0:2] == '03':
-        if len(pno) == 10 or len(pno) == 11:
-            if pno.isdigit():
-                pno = pno[:4]+'-'+pno[4:]
-                print(pno)
-            elif pno[3] == '-':
-                print(pno)
-            else:
-                print('Error 403!')
-        else:
-            print(pno)
-    else:
-        print('Error 404!')
-else:
-    print('Error 405\nNot Found!')
-
+# print('Enter:')
+# pno=input()
+# if len(pno) > 9:
+#     if pno[0:3] == '+92':
+#         if len(pno) == 12 or len(pno) == 13 or len(pno) == 14:
+#             if pno[1:11].isdigit():
+#                 pno = '0'+pno[3:6]+'-'+pno[6:]
+#                 print(pno)
+#             elif pno[6] == '-':
+#                 print(pno)
+#             else:
+#                 print('Error 401!')
+#         else:
+#             print('Error 402!')
+#     elif pno[0:2] == '03':
+#         if len(pno) == 10 or len(pno) == 11:
+#             if pno.isdigit():
+#                 pno = pno[:4]+'-'+pno[4:]
+#                 print(pno)
+#             elif pno[3] == '-':
+#                 print(pno)
+#             else:
+#                 print('Error 403!')
+#         else:
+#             print(pno)
+#     else:
+#         print('Error 404!')
+# else:
+#     print('Error 405\nNot Found!')
